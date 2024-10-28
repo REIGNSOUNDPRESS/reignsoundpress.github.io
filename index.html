@@ -85,7 +85,7 @@
     
     <h1>REIGNSOUND NEWS: Ataah King, New York Weekly</h1>
     
-    <p>Friday, October 25, 2024</p>
+    <p id="published-date"></p>
     
     <p><i>GLOBAL</i> - In a recent feature by New York Weekly, titled <i>Rapper Ataah King's Journey: From Making Mixtapes to Becoming a Professional Artist</i><sup>¹</sup>, the Reignsound<sup>™</sup> Records rapper<sup>²</sup> shares his journey with content strategist Courtney Doonan from Pathos Communications<sup>³</sup>, a U.K.-based public relations firm<sup>⁴</sup>. The article dives into King's evolution in the music industry, highlighting his foundational influences and strategic business initiatives. It also showcases his upcoming projects and vision, offering a glimpse into the values that drive his growth in the entertainment world.</p>
 
@@ -97,6 +97,8 @@
         press.reignsound@gmail.com<br>
         (929) 515-3507
     </p>
+
+    <p id="updated-date"></p>
     
     <footer>
         <p>
@@ -123,6 +125,21 @@
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const publishedDate = "October 25, 2024";
+
+            // Insert published date into the appropriate element
+            document.getElementById("published-date").textContent = publishedDate;
+
+            // Get last modified date
+            const updatedDate = new Date(document.lastModified);
+            const options = { month: 'long', day: 'numeric', year: 'numeric' };
+            document.getElementById("updated-date").textContent = "Updated " + updatedDate.toLocaleDateString('en-US', options);
+            
+        });
+        
+        // Set the current year for copyright
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
