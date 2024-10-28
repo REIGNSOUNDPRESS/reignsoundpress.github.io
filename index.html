@@ -77,12 +77,15 @@
             4. "<a href="https://payonresultspr.com/about-us-pathos/">About Us</a>" — as presented by: Pathos Communications. Retrieved October 25, 2024.
         </p>
         
-        <p>&copy; 2024 REIGNSOUND PRESS. All rights reserved. Powered by Reignsound™ Records, a division of Reignsound.</p>
+        <p>&copy; <span id="current-year"></span> REIGNSOUND PRESS. All rights reserved. Powered by Reignsound™ Records, a division of Reignsound.</p>
         <p>
             <a href="https://reignsoundpress.github.io/sitemap.xml">Sitemap</a>
         </p>
 
     </footer>
-   
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
