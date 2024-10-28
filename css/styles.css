@@ -34,6 +34,7 @@ h1 {
 }
 
 #published-date, #updated-date {
+  color: #777777;
   font-size: 0.75em;
 }
   
