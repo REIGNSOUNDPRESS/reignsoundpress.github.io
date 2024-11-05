@@ -116,7 +116,7 @@
           press.reignsound@gmail.com<br>
       </p>
   
-      <p class="updated-date" id="updated-date"></p>
+      <p class="updated-date" id="updated-date-2"></p>
   
       <p>
           Article ID: R-RR-RP-RNN-PR-0001
@@ -309,9 +309,15 @@
               // Insert published date into the appropriate element
               document.getElementById("published-date").textContent = publishedDate.toLocaleDateString('en-US', options);
   
-              // Get last modified date
+              // Get updated date
               const updatedDate = new Date(document.lastModified);
+
+              // Insert updated date into article 1
               document.getElementById("updated-date").textContent = "Updated " + updatedDate.toLocaleDateString('en-US', options);
+
+              // Insert updated date into article 2
+              document.getElementById("updated-date-2").textContent = "Updated " + updatedDate.toLocaleDateString('en-US', options);
+           
           });
           
           // Set the current year for copyright
