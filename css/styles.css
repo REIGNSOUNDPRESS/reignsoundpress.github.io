@@ -1,5 +1,6 @@
 .article-paragraph::before {
   content: '\00B6';
+  vertical-align: middle;
 }
 
 .image-container {
