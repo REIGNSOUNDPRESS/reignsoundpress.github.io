@@ -285,13 +285,39 @@
   </body>
           
   <footer>
-  
-    <p>&copy; <span id="current-year"></span> REIGNSOUND PRESS. All rights reserved. Powered by Reignsound<sup>™</sup> Records, a division of Reignsound.</p>
+
+    <div class="footer-content">
+
+      <div class="footer-disclaimer">
+    
+        &copy; <span id="current-year"></span>
+        REIGNSOUND<sup>™</sup> PRESS
+        <br>
         
-    <p>
-      <a href="https://reignsoundpress.github.io/sitemap.xml">Sitemap</a>
-    </p>
-  
+        Powered by Reignsound<sup>™</sup>
+        <br>
+        
+        All rights reserved
+        <br>
+        <br>
+
+      </div>
+
+      <div class="footer-sitemap">
+      
+        <a href="https://reignsoundpress.github.io/sitemap.xml">Sitemap</a>
+
+      </div>
+
+    </div>
+
+    <script>
+
+      // Set the current year for copyright
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+    </script>
+    
   </footer>
   
   <script>
