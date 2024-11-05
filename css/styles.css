@@ -1,3 +1,7 @@
+.article-paragraph::before {
+  content: '\00B6';
+}
+
 .image-container {
   text-align: center;
   margin: 20px;
