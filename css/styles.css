@@ -1,6 +1,6 @@
 .article-paragraph::before {
   content: '\00B6';
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 .image-container {
