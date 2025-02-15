@@ -36,6 +36,11 @@
   line-height: 1.6;
 }
 
+.superscript-content {
+  font-size:  0.8em;
+  vertical-align: super;
+}
+
 .superscript-link {
   text-decoration: none;
   color: blue;
