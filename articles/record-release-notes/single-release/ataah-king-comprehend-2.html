@@ -82,7 +82,7 @@
       <p class="published-date">Thursday, October 3, 2024</p>
         
       <p class="article-paragraph">
-        <i>GLOBAL</i> - Reignsound<sup>™</sup><a href="https://musicbrainz.org/label/e866b89c-e18e-41b0-93d0-73c3cdb59e63" class="superscript-link"><sup class="superscript-content">[<span class="superscript-number">1</span>]</sup></a> rapper Ataah King<sup>²</sup> joins forces with TikTok<sup>³</sup> via SoundOn Global,<sup>⁴</sup> TikTok's worldwide music distribution arm, for a spin on Ataah's SoundCloud record <i>Comprehend</i><sup>⁵</sup>.<sup>⁶</sup>
+        <i>GLOBAL</i> - Reignsound<sup>™</sup><a href="https://musicbrainz.org/label/e866b89c-e18e-41b0-93d0-73c3cdb59e63" class="superscript-link citation-link" data-citation="1"><sup class="superscript-content">[<span class="superscript-number">1</span>]</sup></a> rapper Ataah King<sup>²</sup> joins forces with TikTok<sup>³</sup> via SoundOn Global,<sup>⁴</sup> TikTok's worldwide music distribution arm, for a spin on Ataah's SoundCloud record <i>Comprehend</i><sup>⁵</sup>.<sup>⁶</sup>
       </p>
       
       <p class="article-paragraph">
@@ -250,6 +250,20 @@
   </footer>
   
   <script>
+
+    document.querySelectorAll('.citation-link').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const citationId = this.getAttribute('data-citation');
+        const citationText = document.getElementById('citation-${citationId}').innerHTML;
+        document.getElementById('popup-citatoin-text').innerHTML = citationText;
+        document.getElementById('citation-popup').style.display = 'block';
+      });
+    });
+
+    function closePopup() {
+      document.getElementById('citation-popup').style.display = 'none';
+    }
 
           document.addEventListener("DOMContentLoaded", function() {
   
