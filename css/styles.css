@@ -38,7 +38,6 @@
 
 .superscript-content {
   font-size:  0.8em;
-  line-height: 1;
   vertical-align: super;
 }
 
@@ -53,6 +52,14 @@
 
 .superscript-link:hover {
   color:red;
+}
+
+.superscript-link sup:hover .superlink-number {
+  text-decoration: underline;
+}
+
+.superscript number {
+  text-decoration: none;
 }
 
 a {
