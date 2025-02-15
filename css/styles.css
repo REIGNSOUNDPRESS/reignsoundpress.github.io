@@ -36,6 +36,10 @@
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none; 
+}
+
 body {
   font-family: "Public Sans Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
