@@ -45,7 +45,7 @@
   color: blue;
   font-size: 0.8em;
   text-decoration: none;
-  vertical-align: super;
+  vertical-align: top;
 }
 
 .superscript-link sup:hover {
