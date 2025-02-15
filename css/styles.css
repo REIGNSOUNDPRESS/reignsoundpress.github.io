@@ -36,6 +36,19 @@
   line-height: 1.6;
 }
 
+.superscript-link {
+  text-decoration: none;
+  color: blue;
+}
+
+.superscript-link sup:hover {
+  text-docoration: underline;
+}
+
+.superscript-link:hover {
+  color:red;
+}
+
 a {
   text-decoration: none; 
 }
