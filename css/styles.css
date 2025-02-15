@@ -38,6 +38,7 @@
 
 .superscript-content {
   font-size:  0.8em;
+  line-height: 1;
   vertical-align: super;
 }
 
