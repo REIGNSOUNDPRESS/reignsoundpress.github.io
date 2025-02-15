@@ -258,19 +258,25 @@
   
   <script>
 
-    document.querySelectorAll('.citation-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
+    document.querySelectorAll('.superscript-link').forEach(function(link) {
+      link.addEventListener('click', function() {
         e.preventDefault();
-        const citationId = this.getAttribute('data-citation');
-        const citationText = document.getElementById('citation-${citationId}').innerHTML;
-        document.getElementById('popup-citatoin-text').innerHTML = citationText;
-        document.getElementById('citation-popup').style.display = 'block';
+        const citationNumber = this.getAttribute('data-citation');
+        const citationText = document.getElementById('citation-' + citationNumber).innerHTML;
+        document.getElementById('popup-text').innerHTML = citationText;
+        document.getElementById('popup').style.display = 'block';
       });
     });
 
-    function closePopup() {
-      document.getElementById('citation-popup').style.display = 'none';
-    }
+    document.getElementById('popup-close').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target === document.getElementById('popup')) {
+        document.getElementById('popup').style.display = 'none';
+      }
+    });
 
           document.addEventListener("DOMContentLoaded", function() {
   
