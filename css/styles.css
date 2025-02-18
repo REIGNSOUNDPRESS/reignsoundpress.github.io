@@ -1,7 +1,11 @@
+/* ADDING:
+     — Pilcrow text symbol before all article-paragraph paragraphs
+     — 4px of space to the right of pilcrow text symbol -->
 .article-paragraph::before {
   content: '\00B6';
   margin-right: 4px;
 }
+*/
 
 .footer-content {
 
@@ -40,6 +44,10 @@
 
 .mark-purple {
   background-color: thistle;
+}
+
+.mark-red {
+  background-color:lawngreen;
 }
 
 .node-type {
