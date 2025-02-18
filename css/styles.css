@@ -29,6 +29,15 @@
   height: auto;
 }
 
+.mark-black {
+  background-color: black;
+  color: white;
+}
+
+.mark-purple {
+  background-color: thistle;
+}
+
 .node-type {
   text-transform: uppercase;
   font-weight: 800;
