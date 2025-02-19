@@ -180,7 +180,9 @@ h1 {
 }
 
 mark {
-  padding: 0.2em;
+  border-radius: 2px;
+  line-height: 1;
+  padding: 0.1em 0.2em;
 }
   
 #updated-date {
