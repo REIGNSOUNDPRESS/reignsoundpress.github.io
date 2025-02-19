@@ -77,7 +77,7 @@
           -> Responsive Design:
              — Width: ensures the page fits the screen
              — Initial-scale: sets the zoom level -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>REIGNSOUND&trade; NEWS: ATAAH KING, Black Wall Street Times&trade;, SoundOn&reg; Global</title>
 
@@ -113,7 +113,7 @@
          -> "The Hook" (Lead/Intro)
           — Designed to grab reader's attention -->
         <p class="article-paragraph">
-          <mark class="mark-black">GLOBAL</mark> - <mark class="mark-purple"><strong><u>Reignsound&trade; Records</u></strong></mark><a href="#citation-1" class="superscript-link" data-citation="1"><sup class="superscript-content tooltip">[<span class="superscript-number">1</span>]</sup></a> <mark>rapper</mark> <mark class="mark-purple"><strong>ATAAH KING</strong></mark><sup>²</sup> <mark>joins</mark> forces with <mark class="mark-orange"><strong><u>TikTok</u>&reg;</strong></mark><sup>³</sup> via <mark class="mark-orange"><strong><u>SoundOn&reg; Global</u></strong></mark>,<sup>⁴</sup> <mark>TikTok's worldwide music distribution arm</mark>, for a <mark class="mark-green">spin</mark> on <mark class="mark-purple">ATAAH</mark>'s <mark class="mark-orange"><strong><u>SoundCloud</u>&reg;</strong></mark> <mark class="mark-green">record</mark> <mark class="mark-purple"><i><strong>Comprehend</strong></i></mark><sup>⁵</sup>.<sup>⁶</sup>
+          <mark class="mark-black">GLOBAL</mark> - <mark class="mark-purple"><strong><u>Reignsound&trade; Records</u></strong></mark><a href="#citation-1" class="superscript-link" data-citation="1"><sup class="superscript-content tooltip" data-source="citation-1">[<span class="superscript-number">1</span>]<span class="tooltip-text"></span></sup></a> <mark>rapper</mark> <mark class="mark-purple"><strong>ATAAH KING</strong></mark><a href="#citation-2"><sup class="superscript-content tooltip" data-source="citation-2">[<span class="superscript-number">2</span>]<span class="tooltip-text"></span></sup></a> <mark>joins</mark> forces with <mark class="mark-orange"><strong><u>TikTok</u>&reg;</strong></mark><sup>³</sup> via <mark class="mark-orange"><strong><u>SoundOn&reg; Global</u></strong></mark>,<sup>⁴</sup> <mark>TikTok's worldwide music distribution arm</mark>, for a <mark class="mark-green">spin</mark> on <mark class="mark-purple">ATAAH</mark>'s <mark class="mark-orange"><strong><u>SoundCloud</u>&reg;</strong></mark> <mark class="mark-green">record</mark> <mark class="mark-purple"><i><strong>Comprehend</strong></i></mark><sup>⁵</sup>.<sup>⁶</sup>
         </p>
       
       <!-- ARTICLE PARAGRAPH:
@@ -214,11 +214,11 @@
           References
         </h1>
         
-        <p id="citation-1" class="reference tooltiptext">
+        <p id="citation-1" class="reference tooltip-text">
           1. "<a href="https://musicbrainz.org/label/e866b89c-e18e-41b0-93d0-73c3cdb59e63">Reignsound&trade; Records</a>" — as listed in: <i>MusicBrainz&reg;</i> (2024). Retrieved 3 October 2024.
         </p>
         
-        <p>
+        <p id="citation-2" class="tooltip-text">
           2. "<a href="https://www.wikidata.org/wiki/Q130376852">ATAAH KING</a>" — as listed in: <i>Wikidata&reg;</i> (2024). Retrieved 3 October 2024.
         </p>
         
@@ -267,6 +267,26 @@
         </p>
 
     </div>
+
+    <!-- SETTING UP:
+       -> Script
+        — Tooltip -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+          document.querySelectorAll(".tooltip").forEach(tooltip => {
+            let sourceId = tooltip.getAttribute("data-source");
+
+            let sourceText = document.getElementById(sourceId)?.textContent || "Reference not found.";
+
+            tooltip.querySelector(".tooltip-text").textContent = sourceText;
+          });
+          /*
+          let referenceText = document.getElementById("citation-1").textContent;
+
+          document.querySelector(".tooltip .tooltip-text").textContent = referenceText;*/
+        });
+      </script>
     
   </body>
           

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <!-- LINKING:
+       -> Font
+        — "Merriweather" -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <!-- LINKING:
+        -> Stylesheet
+            — "styles.css" -->
+            <link rel="stylesheet" href="/temp/styles.css">     
+
+        <!-- SETTING UP:
+            -> Character Encoding -->
+            <meta charset="UTF-8">
+
+    </head>
+
+    <body style="text-align:center;">
+
+        <h2>Top Tooltip w/ Bottom Arrow</h2>
+
+        <div class="tooltip">Hover over me
+            <span class="tooltip-text"></span>
+        </div>
+
+        <h1>References</h1>
+        <p id="tooltip-source">Tooltip textR</p>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let referenceText = document.getElementById("tooltip-source").textContent;
+
+                document.querySelector(".tooltip .tooltip-text").textContent = referenceText;
+            })
+        </script>
+
+    </body>
+
+</html>
