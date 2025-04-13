@@ -7,6 +7,11 @@
 }
 */
 
+.contact-div {
+  background-color: lightyellow;
+  padding: 20px;
+}
+
 .footer-content {
 
   margin: 0 auto;
@@ -122,6 +127,15 @@
   text-decoration: none;
 }
 
+.trademarking {
+  font-size: 0.5em;
+}
+
+.trademark-r {
+  font-size: 0.6em;
+  vertical-align: 0.6em;
+}
+
 .tooltip {
   border-bottom: 1px dotted black;
   cursor: pointer;
@@ -163,6 +177,16 @@
 .tooltip:hover .tooltip-text {
   opacity: 1;
   visibility: visible;
+}
+
+.trademarking {
+  font-size: 0.3em;
+  vertical-align: 2em;
+}
+
+.trademark-r {
+  font-size: 0.3em;
+  vertical-align: 2em;
 }
 
 a {
