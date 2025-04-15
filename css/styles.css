@@ -29,6 +29,10 @@
   
 }
 
+.footer-disclaimer {
+  font-family: 'Merriweather';
+}
+
 .image-container {
   text-align: center;
   margin: 20px;
@@ -133,6 +137,16 @@
 
 .superscript-number {
   text-decoration: none;
+}
+
+.trademarking-title {
+  font-size: 0.325em;
+  vertical-align: 2em;
+}
+
+.trademark-r-title {
+  font-size: 0.325em;
+  vertical-align: 2em;
 }
 
 .trademarking {
