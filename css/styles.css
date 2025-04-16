@@ -139,6 +139,10 @@
   text-decoration: none;
 }
 
+.trademarking, .trademarking-title, .trademark-r, .trademark-r-title {
+  font-family: 'Merriweather';
+}
+
 .trademarking-title {
   font-size: 0.325em;
   vertical-align: 2em;
@@ -151,7 +155,7 @@
 
 .trademarking {
   font-size: 0.325em;
-  vertical-align: 1em;
+  vertical-align: 2em;
 }
 
 .trademark-r {
