@@ -61,6 +61,11 @@
   
 }
 
+.footer-copyright-symbol {
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
 .footer-disclaimer {
   font-family: 'Merriweather';
 }
@@ -100,6 +105,12 @@
 
 .mark-purple {
   background-color: thistle;
+}
+
+/* UNTITLED SECTION */
+
+.no-break {
+  white-space: nowrap;
 }
 
 /* UNTITLED SECTION */
