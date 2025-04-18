@@ -155,6 +155,15 @@
   vertical-align: super;
 }
 
+.superscript-digits {
+
+  font-family: 'Merriweather';
+  font-size: 0.4rem;
+  padding-left: 1px;
+  vertical-align: 0.6rem;
+
+}
+
 .superscript-link {
   color: blue;
   cursor: pointer;
@@ -187,22 +196,26 @@
 
 .trademarking-title {
   font-size: 0.325em;
+  padding-left: 1px;
   vertical-align: 2em;
 }
 
 .trademark-r-title {
   font-size: 0.325em;
+  padding-left: 1px;
   vertical-align: 2em;
 }
 
 .trademarking {
   font-size: 0.4rem;
+  padding-left: 1px;
   vertical-align: 0.6rem;
 }
 
 .trademark-r {
-  font-size: 0.6em;
-  vertical-align: 0.7em;
+  font-size: 0.5rem;
+  padding-left: 1px;
+  vertical-align: 0.5rem;
 }
 
 /* UNTITLED SECTION */
