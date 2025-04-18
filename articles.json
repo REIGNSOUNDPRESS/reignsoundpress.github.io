@@ -1,22 +1,22 @@
 [
     {
-      "path": "press-releases/2024-10-25-NY-weekyl.html",
+        "path": "press-releases/2025-02-02-Trollin.html",
+        "date": "2025-02-02"
+    },
+    {
+        "path": "press-releases/2025-01-27-IIIAMDESS.html",
+        "date": "2025-01-27"
+    },
+    {
+        "path": "press-releases/2025-01-17-JussJabzz.html",
+        "date": "2025-01-17"
+    },
+    {
+      "path": "press-releases/2024-10-25-NY-weekly.html",
       "date": "2024-10-25"
     },
     {
-      "path": "press-releases/2025-01-17-JussJabzz.html",
-      "date": "2025-01-17"
-    },
-    {
-      "path": "press-releases/2025-01-27-IIIAMDESS.html",
-      "date": "2025-01-27"
-    },
-    {
-      "path": "press-releases/2025-02-02-Trollin.html",
-      "date": "2025-02-02"
-    },
-    {
-      "path": "press-releases/2024-10-25-NY-weekyl.html",
-      "date": "2024-10-25"
+      "path": "record-release-notes/2024-10-03-comprehend-2.html",
+      "date": "2024-10-03"
     }
   ]  
