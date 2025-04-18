@@ -115,20 +115,28 @@
     <div class="article-slot" id="article-slot-5"></div>
 
     <script>
-      fetch('/articles.json')
-        .then(res => res.json())
-        .then(articles => {
-          articles.slice(0, 5).forEach((article, index) => {
-            fetch(`/${article.path}`)
-              .then(res => res.text())
-              .then(html => {
-                const slot = document.getElementById(`article-slot-${index + 1}`);
-                if (slot) slot.innerHTML = html;
-              });
-          });
-        })
-        .catch(err => console.error('Failed to load articles:', err));
-    </script>  
+      // Manually define the article paths
+      const articlePaths = [
+        'press-releases/2024-10-25-NY-weekyl.html',
+        'press-releases/2025-01-17-JussJabzz.html',
+        'press-releases/2025-01-27-IIIAMDESS.html',
+        'press-releases/2025-02-02-Trollin.html',
+        'press-releases/2024-10-25-NY-weekyl.html'  // Add the rest of your article paths here
+      ];
+    
+      // Loop through the article paths and load them into the slots
+      articlePaths.forEach((path, index) => {
+        fetch(path)
+          .then(res => res.text())
+          .then(html => {
+            const slot = document.getElementById(`article-slot-${index + 1}`);
+            if (slot) {
+              slot.innerHTML = html;
+            }
+          })
+          .catch(err => console.error(`Failed to load article at ${path}:`, err));
+      });
+    </script>    
     
   </body>
           
