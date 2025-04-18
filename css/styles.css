@@ -10,14 +10,26 @@
 .contact-div {
   background-color: lightyellow;
   padding: 20px;
-  border: 1px solid #e0c66d; /* soft gold-like tone */
+  border: 1px solid #e0c66d;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather';
   max-width: 700px;
   margin: 20px auto;
   color: #333;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
 }
+
+.contact-div.open .more-indicator {
+  display: none;
+}
+
+.contact-div.open .hidden-details {
+  display: inline;
+}
+
 
 .footer-content {
 
@@ -31,6 +43,10 @@
 
 .footer-disclaimer {
   font-family: 'Merriweather';
+}
+
+.hidden-details {
+  display: none;
 }
 
 .image-container {
@@ -64,6 +80,15 @@
 
 .mark-purple {
   background-color: thistle;
+}
+
+.more-indicator {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  color: #666; /* dark grey */
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 .node-type {
