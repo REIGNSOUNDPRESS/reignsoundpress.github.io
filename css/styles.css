@@ -13,13 +13,13 @@
   border: 1px solid #e0c66d;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: 'Merriweather';
+  font-family: 'Merriweather', serif;
   max-width: 700px;
   margin: 20px auto;
   color: #333;
   cursor: pointer;
-  text-align: left;
-  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .contact-div.open .more-indicator {
@@ -86,7 +86,7 @@
   display: block;
   margin-top: 8px;
   text-align: center;
-  color: #666; /* dark grey */
+  color: #666;
   font-size: 0.9em;
   font-style: italic;
 }
