@@ -7,6 +7,8 @@
 }
 */
 
+/* .contact-div BOX STYLES */
+
 .contact-div {
   background-color: lightyellow;
   padding: 20px;
@@ -34,6 +36,20 @@
   display: inline;
 }
 
+.hidden-details {
+  display: none;
+}
+
+.more-indicator {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* FOOTER STYLES */
 
 .footer-content {
 
@@ -49,9 +65,7 @@
   font-family: 'Merriweather';
 }
 
-.hidden-details {
-  display: none;
-}
+/* UNTITLED SECTION */
 
 .image-container {
   text-align: center;
@@ -68,6 +82,8 @@
   max-width: 100%;
   height: auto;
 }
+
+/* HIGHLIGHT/MARK STYLES */
 
 .mark-black {
   background-color: black;
@@ -86,14 +102,7 @@
   background-color: thistle;
 }
 
-.more-indicator {
-  display: block;
-  margin-top: 8px;
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  font-style: italic;
-}
+/* UNTITLED SECTION */
 
 .node-type {
   font-family: 
@@ -139,6 +148,8 @@
   font-size: 0.75em;
 }
 
+/* SUPERSCRIPT STYLING */
+
 .superscript-content {
   font-size:  0.5em;
   vertical-align: super;
@@ -168,6 +179,8 @@
   text-decoration: none;
 }
 
+/* TRADEMARK STYLING */
+
 .trademarking, .trademarking-title, .trademark-r, .trademark-r-title {
   font-family: 'Merriweather';
 }
@@ -191,6 +204,8 @@
   font-size: 0.6em;
   vertical-align: 0.7em;
 }
+
+/* UNTITLED SECTION */
 
 .tooltip {
   border-bottom: 1px dotted black;
