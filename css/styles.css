@@ -22,6 +22,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.contact-div:hover {
+  cursor: pointer;
+}
+
 .contact-div.open .more-indicator {
   display: none;
 }
