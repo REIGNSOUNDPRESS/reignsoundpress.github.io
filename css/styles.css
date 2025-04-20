@@ -123,6 +123,14 @@
   text-transform: uppercase;
 }
 
+.plus-sign {
+
+  font-size: 0.7rem;
+  padding-left: 1.5px;
+  vertical-align: 0.15rem;
+
+}
+
 .popup-box {
   display: none;
   position: fixed;
