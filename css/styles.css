@@ -245,6 +245,20 @@
   vertical-align: 0.5rem;
 }
 
+.trademarking-post-italics {
+  font-size: 0.4rem;
+  padding-left: 3px;
+  vertical-align: 0.6rem;
+}
+
+/* -- ® symbol appearing smaller than regular .trademark-r (not sure why)
+.trademark-r-post-italics {
+  font-size: 0.5rem;
+  padding-left: 3px;
+  vertical-align: 0.5rem;
+}
+*/
+
 .trademarking-caption {
   font-size: 0.3rem;
   padding-left: 0.5px;
