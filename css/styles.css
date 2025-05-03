@@ -116,8 +116,7 @@
 /* UNTITLED SECTION */
 
 .node-type {
-  font-family: 
-  font-weight: 800;
+  font-weight: 500;
   font-size: 0.85rem;
   line-height: 1.6;
   text-transform: uppercase;
@@ -173,6 +172,13 @@
 
 .published-date, .updated-date, #published-date, #updated-date {
   font-size: 0.75em;
+}
+
+.recording-symbol {
+  color: rgb(230, 17, 17);
+  font-size: 0.3rem;
+  padding-left: 1px;
+  vertical-align: 0.7rem;
 }
 
 /* SUPERSCRIPT STYLING */
