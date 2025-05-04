@@ -9,6 +9,10 @@
 
 /* .contact-div BOX STYLES */
 
+.colon {
+  vertical-align: 0.1em;
+}
+
 .contact-div {
   background-color: lightyellow;
   padding: 20px;
