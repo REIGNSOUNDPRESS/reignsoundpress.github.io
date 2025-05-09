@@ -398,3 +398,7 @@ p {
     transform: translateX(-50%);
   }
 }
+
+.pipe {
+  color: #461d51;
+}
