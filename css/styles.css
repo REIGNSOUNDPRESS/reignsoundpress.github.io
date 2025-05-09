@@ -352,7 +352,7 @@ mark {
   padding: 0.1em 0.2em;
 }
 
-P {
+p {
 
   text-align: justify;
   hyphens: auto;
@@ -368,32 +368,28 @@ P {
 .featured-on-scroll {
   overflow: hidden;
   padding: 30px 0;
-  background-color: #f9f9f9;
 }
 
 .scroll-track {
   display: flex;
-  width: 100%;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .scroll-content {
   display: flex;
-  animation: scroll 40s linear infinite;
+  align-items: center;
+  animation: scroll 25s linear infinite;
 }
 
 .scroll-content img {
-  height: 30px;
-  margin: 0 30px;
-  opacity: 0.8;
-  transition: opacity 0.2s;
+  height: 32px;
+  width: auto;
+  margin: 0 40px;
+  opacity: 1; /* Full opacity */
 }
-
-.scroll-content img:hover {
-  opacity: 1;
-}
-
+  
 @keyframes scroll {
   from {
     transform: translateX(0%);
