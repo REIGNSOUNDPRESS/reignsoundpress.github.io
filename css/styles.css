@@ -366,39 +366,37 @@ p {
 
 /* BRANDS SCROLLING */
 .featured-on-scroll {
+  width: 100vw; /* Full viewport width */
   overflow: hidden;
-  padding: 30px 0;
+  background: #fff; /* Optional: add background color */
+  margin: 0; /* Remove any inherited margins */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box;
+  position: relative;
 }
 
 .scroll-track {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+  display: inline-block;
 }
 
 .scroll-content {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  animation: scroll 25s linear infinite;
+  gap: 1rem; /* Adjust spacing between items */
 }
 
-.scroll-content img {
-  height: 32px;
-  width: auto;
-  margin: 0 40px;
-  opacity: 1; /* Full opacity */
+.brand-item img {
+  height: 40px; /* Adjust to desired size */
 }
-  
-@keyframes scroll {
-  from {
-    transform: translateX(0%);
+
+/* Scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
-}
-
-.pipe {
-  color: #461d51;
 }
