@@ -331,7 +331,7 @@ a {
 }
 
 body {
-  font-family: "Merriweather", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Merriweather", system-ui, sans-serif;
   line-height: 1.5;
   margin: 0;
   padding: 20px;
