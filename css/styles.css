@@ -225,6 +225,12 @@
   text-decoration: none;
 }
 
+.title-hyperlink {
+
+  color: black;
+
+}
+
 /* TRADEMARK STYLING */
 
 .trademarking, .trademarking-title, .trademark-r, .trademark-r-title {
