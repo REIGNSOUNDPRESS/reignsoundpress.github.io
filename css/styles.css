@@ -335,6 +335,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 20px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 footer {
