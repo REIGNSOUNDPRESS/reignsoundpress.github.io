@@ -431,7 +431,7 @@ p {
 }
 
 .breaking-banner {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   background: #000;
   color: #fff;
@@ -439,30 +439,28 @@ p {
   font-size: 1rem;
   white-space: nowrap;
   border-bottom: 2px solid #fff;
+  padding: 0.5rem 0;
   margin-left: -20px;
 }
 
 .breaking-track {
   display: flex;
-  width: max-content;
   animation: scroll-banner 20s linear infinite;
 }
 
 .breaking-content {
-  display: flex;
+  display: inline-flex;
   gap: 2rem;
-  padding: 0.5rem 0;
+  min-width: 100%;
+}
+
+.breaking-content::after {
+  content: attr(data-text);
+  display: inline-flex;
+  gap: 2rem;
+  margin-left: 2rem;
 }
 
 .breaking-content span {
   flex-shrink: 0;
-}
-
-@keyframes scroll-banner {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
