@@ -500,6 +500,6 @@ p {
   cursor: pointer;
   text-decoration: none;
   color: red; /* style it however you want */
-  margin-left: 4px;
+  margin-left: 1px;
   position: relative;
 }
