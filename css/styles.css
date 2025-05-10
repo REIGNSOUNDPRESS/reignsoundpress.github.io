@@ -379,6 +379,7 @@ p {
   white-space: nowrap;
   animation: scroll-left 20s linear infinite;
   display: inline-block;
+  max-width: 100%;
 }
 
 .scroll-content {
