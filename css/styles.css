@@ -1,12 +1,3 @@
-/* ADDING:
-     — Pilcrow text symbol before all article-paragraph paragraphs
-     — 4px of space to the right of pilcrow text symbol -->
-.article-paragraph::before {
-  content: '\00B6';
-  margin-right: 4px;
-}
-*/
-
 /* .contact-div BOX STYLES */
 
 .colon {
@@ -373,6 +364,7 @@ p {
   width: 100vw; /* Full viewport width */
   overflow: hidden;
   background: #fff; /* Optional: add background color */
+  margin-left: -20px;
 }
 
 .scroll-track {
