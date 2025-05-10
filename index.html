@@ -81,6 +81,28 @@
           el.classList.toggle("open");
         }
       </script>
+
+      <script>
+  document.querySelectorAll('.popup-wrapper .plus-sign').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const popup = btn.nextElementSibling;
+      const isVisible = popup.style.display === 'block';
+      
+      // Hide all other popups
+      document.querySelectorAll('.popup-content').forEach(p => p.style.display = 'none');
+
+      // Toggle current one
+      popup.style.display = isVisible ? 'none' : 'block';
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.popup-content').forEach(p => p.style.display = 'none');
+  });
+</script>
+
                  
       <title>Reignsound℠ Press</title>
       
