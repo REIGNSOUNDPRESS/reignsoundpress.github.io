@@ -361,57 +361,53 @@ p {
 
 /* BRANDS SCROLLING */
 .featured-on-scroll {
-  width: 100vw; /* Full viewport width */
+  width: 100vw;
   overflow: hidden;
-  background: #fff; /* Optional: add background color */
-  margin-left: -20px;
+  background: #fff;
 }
 
 .scroll-track {
-  white-space: nowrap;
-  animation: scroll-left 30s linear infinite;
   display: flex;
-  width: fit-content;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
 }
 
 .scroll-content {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Adjust spacing between items */
+  gap: 1.5rem;
 }
 
 .brand-item {
-  align-items: center;
-  display: flex;
-  height: 60px; /* Adjust to desired size */
-  justify-content: center;
-  min-width: 60px;
+  flex: 0 0 auto;
+  height: 60px;
   width: 60px;
-  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brand-item img {
-  height: auto;
   max-height: 40px;
+  width: auto;
   object-fit: contain;
   display: block;
-  width: auto;
 }
 
-/* Scrolling animation */
+.pipe {
+  flex: 0 0 auto;
+  font-size: 24px;
+  color: #999;
+}
+
+/* Animation */
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
-}
-
-.pipe {
-
-  color: rgb(73, 73, 73);
-
 }
 
 /* Subtitle Section */
