@@ -396,7 +396,7 @@ p {
 .pipe {
   flex-shrink: 0;
   padding: 0 0.75rem;
-  font-size: 24px;
+  font-size: 12px;
   color: #999;
 }
 
