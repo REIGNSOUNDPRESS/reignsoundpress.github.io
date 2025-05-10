@@ -83,25 +83,28 @@
       </script>
 
       <script>
-  document.querySelectorAll('.popup-wrapper .plus-sign').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const popup = btn.nextElementSibling;
-      const isVisible = popup.style.display === 'block';
-      
-      // Hide all other popups
-      document.querySelectorAll('.popup-content').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.popup-wrapper .plus-sign').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent link behavior
 
-      // Toggle current one
-      popup.style.display = isVisible ? 'none' : 'block';
+      // Close other popups
+      document.querySelectorAll('.popup-content').forEach(popup => {
+        if (popup !== this.nextElementSibling) popup.style.display = 'none';
+      });
+
+      const popup = this.nextElementSibling;
+      popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
     });
   });
 
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.popup-content').forEach(p => p.style.display = 'none');
+  // Optional: close on outside click
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.popup-wrapper')) {
+      document.querySelectorAll('.popup-content').forEach(p => p.style.display = 'none');
+    }
   });
 </script>
+
 
                  
       <title>Reignsound℠ Press</title>

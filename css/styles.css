@@ -512,7 +512,7 @@ p {
 .popup-content {
   display: none;
   position: absolute;
-  top: 1.2em;
+  top: 1.8em;
   left: 50%;
   transform: translateX(-50%);
   background: #000;
@@ -523,8 +523,20 @@ p {
   white-space: normal;
   z-index: 1000;
   width: max-content;
-  max-width: 250px;
+  max-width: 90vw;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Arrow pointing up toward the plus sign */
+.popup-content::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #000;
 }
 
 
@@ -545,10 +557,11 @@ p {
   transform: translateX(-50%);
 }
 
-/* Optional: mobile-only padding or font size adjustments */
 @media (max-width: 600px) {
-  .popup-wrapper .popup-content {
-    font-size: 0.8rem;
-    padding: 0.75rem;
+  .popup-content {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90vw;
+    word-wrap: break-word;
   }
 }
