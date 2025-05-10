@@ -375,32 +375,32 @@ p {
 .scroll-content {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
 }
 
 .brand-item {
-  flex: 0 0 auto;
-  height: 60px;
-  width: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem; /* spacing around each logo */
+  flex-shrink: 0;     /* prevent logos from shrinking */
 }
 
 .brand-item img {
   max-height: 40px;
+  height: auto;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 .pipe {
-  flex: 0 0 auto;
+  flex-shrink: 0;
+  padding: 0 0.75rem;
   font-size: 24px;
   color: #999;
 }
 
-/* Animation */
+/* Smooth scrolling */
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
@@ -409,6 +409,8 @@ p {
     transform: translateX(-50%);
   }
 }
+
+
 
 /* Subtitle Section */
 .subtitle {
