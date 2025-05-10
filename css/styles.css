@@ -369,7 +369,7 @@ p {
 
 .scroll-track {
   white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 15s linear infinite;
   display: inline-block;
   max-width: 100%;
 }
