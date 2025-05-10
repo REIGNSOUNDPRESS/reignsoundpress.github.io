@@ -496,3 +496,34 @@ p {
   vertical-align: 0.15rem;
 
 }
+
+.popup-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.popup-wrapper .popup-content {
+  display: none;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #000;
+  padding: 0.5rem;
+  width: 240px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  z-index: 999;
+}
+
+/* Hover or click activation (comment out one version) */
+
+/* Option 1: Show on hover */
+.popup-wrapper:hover .popup-content {
+  display: block;
+}
+
+/* Option 2: JS toggle (see below) */
