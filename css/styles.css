@@ -330,6 +330,10 @@ a {
   text-decoration: none; 
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Merriweather", system-ui, sans-serif;
   line-height: 1.5;
