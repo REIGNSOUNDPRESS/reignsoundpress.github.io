@@ -370,18 +370,32 @@ p {
 .scroll-track {
   white-space: nowrap;
   animation: scroll-left 30s linear infinite;
-  display: inline-block;
-  width: max-content;
+  display: flex;
+  width: fit-content;
 }
 
 .scroll-content {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 1rem; /* Adjust spacing between items */
+  gap: 1.5rem; /* Adjust spacing between items */
+}
+
+.brand-item {
+  align-items: center;
+  display: flex;
+  height: 60px; /* Adjust to desired size */
+  justify-content: center;
+  min-width: 60px;
+  width: 60px;
+  flex-shrink: 0;
 }
 
 .brand-item img {
-  height: 40px; /* Adjust to desired size */
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+  display: block;
+  width: auto;
 }
 
 /* Scrolling animation */
