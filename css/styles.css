@@ -445,7 +445,7 @@ p {
 .breaking-track {
   display: flex;
   width: max-content;
-  animation: scroll-banner 20s linear infinite;
+  animation: scroll-banner 30s linear infinite;
 }
 
 .breaking-content {
