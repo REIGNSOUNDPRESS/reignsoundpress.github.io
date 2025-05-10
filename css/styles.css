@@ -440,11 +440,12 @@ p {
   border-bottom: 2px solid #fff;
   position: relative;
   color: white;
+  margin-left: -20px;
 }
 
 .breaking-track {
   display: flex;
-  animation: scroll-banner 20s linear infinite;
+  animation: scroll-banner 40s linear infinite;
   width: max-content;
 }
 
@@ -456,7 +457,7 @@ p {
 
 .breaking-content span {
   flex-shrink: 0;
-  animation: fade-color 4s linear infinite;
+  animation: fade-color 10s linear infinite;
 }
 
 /* Make every second "NEWS" alternate the animation phase */
