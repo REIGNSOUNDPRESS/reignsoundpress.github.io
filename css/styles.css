@@ -401,3 +401,9 @@ p {
     transform: translateX(-50%);
   }
 }
+
+.pipe {
+
+  color: rgb(73, 73, 73);
+
+}
