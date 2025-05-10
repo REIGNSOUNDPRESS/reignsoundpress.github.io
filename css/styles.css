@@ -117,22 +117,6 @@
   text-transform: uppercase;
 }
 
-.plus-sign {
-
-  font-size: 0.7rem;
-  padding-left: 1.5px;
-  vertical-align: 0.15rem;
-
-}
-
-.plus-sign-brackets {
-
-  font-size: 0.5rem;
-  padding-left: 1.5px;
-  vertical-align: 0.15rem;
-
-}
-
 .popup-box {
   display: none;
   position: fixed;
@@ -482,4 +466,33 @@ p {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* Make plus sign focusable */
+.plus-sign {
+  outline: none;
+}
+.plus-sign:focus {
+  outline: none;
+}
+.plus-sign:focus + .popup-box {
+  display: block;
+}
+
+.plus-sign {
+
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: red;
+  padding-left: 1.5px;
+  vertical-align: 0.15rem;
+
+}
+
+.plus-sign-brackets {
+
+  font-size: 0.5rem;
+  padding-left: 1.5px;
+  vertical-align: 0.15rem;
+
 }
