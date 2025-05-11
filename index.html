@@ -347,13 +347,18 @@
       // Clone original content into the second container
       cloneContent.innerHTML = originalContent.innerHTML;
 
-      // Reset scroll when reaching halfway (for infinite effect)
+      // Infinite scroll logic
       scrollContainer.addEventListener("scroll", () => {
         const scrollWidth = originalContent.offsetWidth;
-
         if (scrollContainer.scrollLeft >= scrollWidth) {
-          scrollContainer.scrollLeft = scrollContainer.scrollLeft - scrollWidth;
+          scrollContainer.scrollLeft -= scrollWidth;
         }
+      });
+
+      // Scroll with page logic
+      window.addEventListener("scroll", () => {
+        const pageScroll = window.scrollY;
+        scrollContainer.scrollLeft += pageScroll * 0.05; // tweak speed factor
       });
     </script>
 
