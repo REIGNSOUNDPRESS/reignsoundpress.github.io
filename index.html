@@ -340,11 +340,12 @@
     </script>
 
     <script>
+      
       const originalContent = document.getElementById("brandScrollContent");
       const cloneContent = document.getElementById("brandScrollContentClone");
       const scrollContainer = document.getElementById("brandScroller");
 
-      // Clone original content into the second container
+      // Clone original content into the second container for infinite scrolling
       cloneContent.innerHTML = originalContent.innerHTML;
 
       // Infinite scroll logic
@@ -356,10 +357,18 @@
       });
 
       // Scroll with page logic
+      let lastPageScroll = window.scrollY;
+
       window.addEventListener("scroll", () => {
-        const pageScroll = window.scrollY;
-        scrollContainer.scrollLeft += pageScroll * 0.05; // tweak speed factor
+        const currentScroll = window.scrollY;
+        const scrollDelta = currentScroll - lastPageScroll;
+
+        // Sync the scroll with the page scroll (adjust speed here)
+        scrollContainer.scrollLeft += scrollDelta * 1.5;
+
+        lastPageScroll = currentScroll;
       });
+
     </script>
 
   </body>
