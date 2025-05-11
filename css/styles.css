@@ -44,6 +44,12 @@
   flex-shrink: 0;
 }
 
+#brandScroller {
+  scroll-behavior: smooth; /* enables smooth transitions */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 
 /* BREAKING NEWS BANNER SCROLLER */
 .breaking-banner {
