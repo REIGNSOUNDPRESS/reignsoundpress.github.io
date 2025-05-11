@@ -8,14 +8,16 @@
   font-size: 0.7rem;
   white-space: nowrap;
   border-bottom: 2px solid #fff;
-  position: relative;
+  position: fixed;  /* Keep banner fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 9999;
   color: white;
   margin-left: -20px;
 }
 
 .breaking-track {
   display: flex;
-  animation: scroll-banner 40s linear infinite;
   width: max-content;
 }
 
@@ -27,31 +29,6 @@
 
 .breaking-content span {
   flex-shrink: 0;
-  animation: fade-color 10s linear infinite;
-}
-
-/* Make every second "NEWS" alternate the animation phase */
-.breaking-content span:nth-child(even) {
-  animation-delay: 2s; /* half of fade-color duration */
-}
-
-/* Smooth color fade from white to black and back */
-@keyframes fade-color {
-  0%, 100% {
-    color: white;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@keyframes scroll-banner {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
 }
 
 

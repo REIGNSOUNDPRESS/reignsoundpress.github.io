@@ -276,8 +276,28 @@
           })
           .catch(err => console.error(`Failed to load article at ${path}:`, err));
       });
-    </script>    
-    
+    </script>
+
+    <script>
+
+      // Get the breaking track element
+      const breakingTrack = document.querySelector('.breaking-track');
+
+      // Set the initial starting position of the banner
+      let scrollPosition = 0;
+
+      // Listen for scroll event
+      window.addEventListener('scroll', () => {
+        // Get the scroll position
+        scrollPosition = window.scrollY;
+
+        // Adjust the position of the banner based on scroll position
+        // You can tweak this factor to make the scrolling speed faster or slower
+        breakingTrack.style.transform = `translateX(-${scrollPosition * 0.1}px)`; // 0.1 is the scroll speed factor
+      });
+
+    </script>
+
   </body>
           
   <footer>
