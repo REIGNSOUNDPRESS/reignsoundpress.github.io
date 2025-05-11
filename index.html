@@ -295,10 +295,17 @@
       function updateBrandScroll() {
         const scrollY = window.scrollY;
         const offset = scrollY * 0.25;
-        brandTrack.style.transform = `translateX(-${offset}px)`;
+
+        // Total scrollable width before looping
+        const contentWidth = brandTrack.scrollWidth / 2;
+
+        // Loop the scroll using modulo
+        const loopOffset = offset % contentWidth;
+
+        brandTrack.style.transform = `translateX(-${loopOffset}px)`;
       }
 
-      window.addEventListener('scroll', updateBrandScroll);
+      window.addEventListener("scroll", updateBrandScroll);
     </script>
 
   </body>

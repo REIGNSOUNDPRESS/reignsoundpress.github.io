@@ -382,6 +382,7 @@ p {
   background: #fff;
   margin-left: -20px;
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
 }
 
 .featured-on-scroll::-webkit-scrollbar {
