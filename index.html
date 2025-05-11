@@ -165,52 +165,28 @@
         ALSO PUBLISHED ON:
     </p>
 
-    <section class="featured-on-scroll">
-
+    <section class="featured-on-scroll" id="brandScroller">
       <div class="scroll-track" id="brandScrollTrack">
-
-        <!-- First loop of logos -->
-        <div class="scroll-content">
-
+        <div class="scroll-content" id="brandScrollContent">
+          <!-- Original logos -->
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/facebook-logo-gray.png" alt="Facebook" /></div>
+          <div class="brand-item"><img src="images/facebook-logo-gray.png" alt="Facebook" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/github-logo-gray.png" alt="GitHub" /></div>
+          <div class="brand-item"><img src="images/github-logo-gray.png" alt="GitHub" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/instagram-logo-gray.png" alt="Instagram" /></div>
+          <div class="brand-item"><img src="images/instagram-logo-gray.png" alt="Instagram" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/medium-logo-gray.png" alt="Medium" /></div>
+          <div class="brand-item"><img src="images/medium-logo-gray.png" alt="Medium" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/newsbreak-logo-gray.png" alt="NewsBreak" /></div>
+          <div class="brand-item"><img src="images/newsbreak-logo-gray.png" alt="NewsBreak" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/substack-logo-gray.png" alt="Substack" /></div>
+          <div class="brand-item"><img src="images/substack-logo-gray.png" alt="Substack" /></div>
           <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/xrsxl-logo-gray.png" alt="XRSXL" /></div>
-
+          <div class="brand-item"><img src="images/xrsxl-logo-gray.png" alt="XRSXL" /></div>
         </div>
-
-        <!-- Duplicate loop for seamless scroll -->
-        <div class="scroll-content">
-
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/facebook-logo-gray.png" alt="Facebook" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/github-logo-gray.png" alt="GitHub" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/instagram-logo-gray.png" alt="Instagram" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/medium-logo-gray.png" alt="Medium" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/newsbreak-logo-gray.png" alt="NewsBreak" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/substack-logo-gray.png" alt="Substack" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/xrsxl-logo-gray.png" alt="XRSXL" /></div>
-
-        </div>
-
+        <!-- Clone for infinite scroll -->
+        <div class="scroll-content clone" id="brandScrollContentClone"></div>
       </div>
-
     </section>
 
     <br>
@@ -289,26 +265,21 @@
     </script>
 
     <script>
-      const brandTrack = document.getElementById("brandScrollTrack");
+      const originalContent = document.getElementById("brandScrollContent");
+      const cloneContent = document.getElementById("brandScrollContentClone");
+      const scrollContainer = document.getElementById("brandScroller");
 
-      // Function to update the brand scroll position
-      function updateBrandScroll() {
-        const scrollY = window.scrollY; // Get the current scroll position
-        const offset = scrollY * 0.25; // Adjust the scroll speed (0.25 is a multiplier)
+      // Clone original content into the second container
+      cloneContent.innerHTML = originalContent.innerHTML;
 
-        // Total width of the content before it loops (half the scrollable content width)
-        const contentWidth = brandTrack.scrollWidth / 2;
+      // Reset scroll when reaching halfway (for infinite effect)
+      scrollContainer.addEventListener("scroll", () => {
+        const scrollWidth = originalContent.offsetWidth;
 
-        // Calculate the looping offset using modulo to create an infinite scroll effect
-        const loopOffset = offset % contentWidth;
-
-        // Apply the transform to move the track horizontally
-        brandTrack.style.transform = `translateX(-${loopOffset}px)`;
-      }
-
-      // Listen for the scroll event and update the scroll position
-      window.addEventListener("scroll", updateBrandScroll);
-
+        if (scrollContainer.scrollLeft >= scrollWidth) {
+          scrollContainer.scrollLeft = scrollContainer.scrollLeft - scrollWidth;
+        }
+      });
     </script>
 
   </body>

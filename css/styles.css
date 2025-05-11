@@ -1,22 +1,22 @@
 /* BRANDS LOGOS SCROLLER */
 .featured-on-scroll {
   width: 100vw;
-  overflow-x: auto; /* allow manual horizontal scrolling */
-  background: #fff;
-  margin-left: -20px;
-  scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth; /* smooth scrolling */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: relative;
 }
 
 .featured-on-scroll::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .scroll-track {
   display: flex;
   width: max-content;
-  transform: translateX(0); /* will update via JS */
-  will-change: transform; /* prepare for optimization */
 }
 
 .scroll-content {
@@ -34,27 +34,13 @@
 
 .brand-item img {
   max-height: 40px;
-  height: auto;
-  width: auto;
   object-fit: contain;
-  display: block;
 }
 
 .pipe {
-  flex-shrink: 0;
   padding: 0 0.75rem;
-  font-size: 12px;
   color: #999;
-}
-
-/* Optional smooth scroll animation */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  flex-shrink: 0;
 }
 
 
