@@ -259,12 +259,6 @@
   text-decoration: none;
 }
 
-.title-hyperlink {
-
-  color: black;
-
-}
-
 
 /* TRADEMARK STYLING */
 
@@ -466,7 +460,7 @@ p {
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     margin-top: 10px;
     font-weight: normal;
@@ -474,10 +468,16 @@ p {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
     margin-top: 0;
     font-weight: bold;
+}
+
+.title-hyperlink {
+
+  color: black;
+
 }
 
 
