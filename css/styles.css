@@ -1,4 +1,4 @@
-/* BRANDS SCROLLING */
+/* BRANDS LOGOS SCROLLER */
 .featured-on-scroll {
   width: 100vw;
   overflow-x: auto; /* allow manual horizontal scrolling */
@@ -59,8 +59,7 @@
 }
 
 
-/* BREAKING NEWS BANNER STYLES */
-
+/* BREAKING NEWS BANNER SCROLLER */
 .breaking-banner {
   width: 100vw;
   overflow: hidden;
@@ -69,10 +68,7 @@
   font-size: 0.7rem;
   white-space: nowrap;
   border-bottom: 2px solid #fff;
-  position: fixed;  /* Keep banner fixed at the top */
-  top: 0;
-  left: 0;
-  z-index: 9999;
+  position: relative; /* This keeps it in flow, not fixed */
   color: white;
   margin-left: -20px;
 }
@@ -80,6 +76,8 @@
 .breaking-track {
   display: flex;
   width: max-content;
+  will-change: transform;
+  /* remove animation: scroll-banner... */
 }
 
 .breaking-content {

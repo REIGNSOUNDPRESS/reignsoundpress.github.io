@@ -280,18 +280,12 @@
 
     <script>
       const breakingTrack = document.querySelector('.breaking-track');
-      let currentOffset = 0;
-      let targetOffset = 0;
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
 
-      function smoothNewsBannerScroll() {
-        targetOffset = window.scrollY * 0.2; // controls speed
-        currentOffset += (targetOffset - currentOffset) * 0.1; // controls smoothness
-
-        breakingTrack.style.transform = `translateX(-${currentOffset}px)`;
-        requestAnimationFrame(smoothNewsBannerScroll);
-      }
-
-      requestAnimationFrame(smoothNewsBannerScroll);
+        // Adjust the multiplier to control how fast the banner scrolls
+        breakingTrack.style.transform = `translateX(-${scrollY * 0.2}px)`;
+      });
     </script>
 
     <script>
