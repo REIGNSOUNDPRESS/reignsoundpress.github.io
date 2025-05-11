@@ -5,7 +5,7 @@
   background: #fff;
   margin-left: -20px;
   scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* smooth scrolling */
 }
 
 .featured-on-scroll::-webkit-scrollbar {
@@ -16,7 +16,7 @@
   display: flex;
   width: max-content;
   transform: translateX(0); /* will update via JS */
-  will-change: transform;
+  will-change: transform; /* prepare for optimization */
 }
 
 .scroll-content {
@@ -47,8 +47,7 @@
   color: #999;
 }
 
-
-/* Smooth scrolling */
+/* Optional smooth scroll animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);

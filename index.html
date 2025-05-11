@@ -291,20 +291,24 @@
     <script>
       const brandTrack = document.getElementById("brandScrollTrack");
 
+      // Function to update the brand scroll position
       function updateBrandScroll() {
-        const scrollY = window.scrollY;
-        const offset = scrollY * 0.25;
+        const scrollY = window.scrollY; // Get the current scroll position
+        const offset = scrollY * 0.25; // Adjust the scroll speed (0.25 is a multiplier)
 
-        // Total scrollable width before looping
+        // Total width of the content before it loops (half the scrollable content width)
         const contentWidth = brandTrack.scrollWidth / 2;
 
-        // Loop the scroll using modulo
+        // Calculate the looping offset using modulo to create an infinite scroll effect
         const loopOffset = offset % contentWidth;
 
+        // Apply the transform to move the track horizontally
         brandTrack.style.transform = `translateX(-${loopOffset}px)`;
       }
 
+      // Listen for the scroll event and update the scroll position
       window.addEventListener("scroll", updateBrandScroll);
+
     </script>
 
   </body>
