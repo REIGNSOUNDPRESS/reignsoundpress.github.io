@@ -190,26 +190,6 @@
 
         </div>
 
-        <!-- Duplicate loop for seamless scroll -->
-        <div class="scroll-content">
-
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/facebook-logo-gray.png" alt="Facebook" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/github-logo-gray.png" alt="GitHub" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/instagram-logo-gray.png" alt="Instagram" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/medium-logo-gray.png" alt="Medium" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/newsbreak-logo-gray.png" alt="NewsBreak" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/substack-logo-gray.png" alt="Substack" /></div>
-          <div class="pipe">|</div>
-          <div class="brand-item"><img src="https://reignsoundpress.github.io/images/brands/xrsxl-logo-gray.png" alt="XRSXL" /></div>
-
-        </div>
-
       </div>
 
     </section>
@@ -288,6 +268,21 @@
         // Adjust the multiplier to control how fast the banner scrolls
         breakingTrack.style.transform = `translateX(-${scrollY * 0.2}px)`;
       });
+    </script>
+
+    <script>
+      const brandTrack = document.getElementById("brandScrollTrack");
+
+      function updateBrandScroll() {
+        const scrollY = window.scrollY;
+        // Adjust this multiplier to control scroll speed
+        const offset = scrollY * 0.25;
+
+        brandTrack.style.transform = `translateX(-${offset}px)`;
+        requestAnimationFrame(updateBrandScroll);
+      }
+
+      requestAnimationFrame(updateBrandScroll);
     </script>
 
   </body>
