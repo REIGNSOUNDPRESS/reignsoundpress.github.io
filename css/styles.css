@@ -55,13 +55,13 @@
 .breaking-banner {
   width: 100vw;
   overflow: hidden;
-  background: #000;
+  background: white;
   font-weight: bold;
   font-size: 0.7rem;
   white-space: nowrap;
-  border-bottom: 2px solid #fff;
+  /*border-bottom: 2px solid #fff;*/
   position: relative; /* This keeps it in flow, not fixed */
-  color: white;
+  color: black;
   margin-left: -20px;
   font-family: Arial;
 }
@@ -483,6 +483,10 @@ p {
   color: red;
   padding-left: 0.5px;
   vertical-align: 0.15rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1px;
+  position: relative;
 
 }
 
@@ -491,15 +495,5 @@ p {
   font-size: 0.5rem;
   padding-left: 1.5px;
   vertical-align: 0.15rem;
-
-}
-
-.plus-sign {
-
-  cursor: pointer;
-  text-decoration: none;
-  color: red; /* style it however you want */
-  margin-left: 1px;
-  position: relative;
 
 }
