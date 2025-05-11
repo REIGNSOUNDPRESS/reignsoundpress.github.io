@@ -1,8 +1,61 @@
-/* .contact-div BOX STYLES */
+/* BREAKING NEWS BANNER STYLES */
 
-.colon {
-  vertical-align: 0.1em;
+.breaking-banner {
+  width: 100vw;
+  overflow: hidden;
+  background: #000;
+  font-weight: bold;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  color: white;
+  margin-left: -20px;
 }
+
+.breaking-track {
+  display: flex;
+  animation: scroll-banner 40s linear infinite;
+  width: max-content;
+}
+
+.breaking-content {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.breaking-content span {
+  flex-shrink: 0;
+  animation: fade-color 10s linear infinite;
+}
+
+/* Make every second "NEWS" alternate the animation phase */
+.breaking-content span:nth-child(even) {
+  animation-delay: 2s; /* half of fade-color duration */
+}
+
+/* Smooth color fade from white to black and back */
+@keyframes fade-color {
+  0%, 100% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+/* CONTACT DIV BOX STYLES */
 
 .contact-div {
   background-color: lightyellow;
@@ -44,6 +97,7 @@
   font-style: italic;
 }
 
+
 /* FOOTER STYLES */
 
 .footer-content {
@@ -65,7 +119,8 @@
   font-family: 'Merriweather';
 }
 
-/* UNTITLED SECTION */
+
+/* IMAGE CONTAINER STYLES */
 
 .image-container {
   text-align: center;
@@ -83,7 +138,8 @@
   height: auto;
 }
 
-/* HIGHLIGHT/MARK STYLES */
+
+/* MARK/HIGHLIGHT STYLES */
 
 .mark-black {
   background-color: black;
@@ -102,11 +158,13 @@
   background-color: thistle;
 }
 
+
 /* UNTITLED SECTION */
 
 .no-break {
   white-space: nowrap;
 }
+
 
 /* UNTITLED SECTION */
 
@@ -160,6 +218,7 @@
   vertical-align: 0.7rem;
 }
 
+
 /* SUPERSCRIPT STYLING */
 
 .superscript-content {
@@ -205,6 +264,7 @@
   color: black;
 
 }
+
 
 /* TRADEMARK STYLING */
 
@@ -255,6 +315,7 @@
   padding-left: 0.5px;
   vertical-align: 0.4rem;
 }
+
 
 /* UNTITLED SECTION */
 
@@ -343,6 +404,7 @@ p {
   font-style: italic;
 }
 
+
 /* BRANDS SCROLLING */
 .featured-on-scroll {
   width: 100vw;
@@ -385,6 +447,7 @@ p {
   color: #999;
 }
 
+
 /* Smooth scrolling */
 @keyframes scroll-left {
   0% {
@@ -396,8 +459,12 @@ p {
 }
 
 
+/* Title Section */
 
-/* Subtitle Section */
+.colon {
+  vertical-align: 0.1em;
+}
+
 .subtitle {
     font-size: 24px;
     text-align: center;
@@ -406,7 +473,6 @@ p {
     color: rgba(0, 0, 0, 0.7);
 }
 
-/* Title Section */
 .title {
     font-size: 50px;
     text-align: center;
@@ -414,69 +480,25 @@ p {
     font-weight: bold;
 }
 
-.breaking-banner {
-  width: 100vw;
-  overflow: hidden;
-  background: #000;
-  font-weight: bold;
-  font-size: 0.7rem;
-  white-space: nowrap;
-  border-bottom: 2px solid #fff;
-  position: relative;
-  color: white;
-  margin-left: -20px;
-}
 
-.breaking-track {
-  display: flex;
-  animation: scroll-banner 40s linear infinite;
-  width: max-content;
-}
+/* PLUS SIGN STYLES */
 
-.breaking-content {
-  display: flex;
-  gap: 2rem;
-  padding: 0.5rem 0;
-}
-
-.breaking-content span {
-  flex-shrink: 0;
-  animation: fade-color 10s linear infinite;
-}
-
-/* Make every second "NEWS" alternate the animation phase */
-.breaking-content span:nth-child(even) {
-  animation-delay: 2s; /* half of fade-color duration */
-}
-
-/* Smooth color fade from white to black and back */
-@keyframes fade-color {
-  0%, 100% {
-    color: white;
-  }
-  50% {
-    color: black;
-  }
-}
-
-@keyframes scroll-banner {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-/* Make plus sign focusable */
 .plus-sign {
+
   outline: none;
+
 }
+
 .plus-sign:focus {
+
   outline: none;
+
 }
+
 .plus-sign:focus + .popup-box {
+
   display: block;
+
 }
 
 .plus-sign {
@@ -496,10 +518,13 @@ p {
   vertical-align: 0.15rem;
 
 }
+
 .plus-sign {
+
   cursor: pointer;
   text-decoration: none;
   color: red; /* style it however you want */
   margin-left: 1px;
   position: relative;
+
 }
