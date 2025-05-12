@@ -1054,28 +1054,39 @@
     </script>
 
     <script>
-
       const toggleBtn = document.getElementById('theme-toggle');
 
-      // Check stored theme preference
-      let storedTheme = localStorage.getItem('theme');
+      let isShrunk = false;
+      let userTapped = false;
 
-      if (!storedTheme) {
-        // If no preference stored, use system setting
+      // Apply system theme or saved preference
+      let theme = localStorage.getItem('theme');
+      if (!theme) {
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        storedTheme = prefersDark ? 'dark' : 'light';
+        theme = prefersDark ? 'dark' : 'light';
       }
-
-      // Apply stored or detected theme
-      if (storedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
+      if (theme === 'dark') document.body.classList.add('dark-mode');
 
       toggleBtn.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        if (isShrunk && !userTapped) {
+          // First tap: expand the button
+          toggleBtn.classList.remove('shrunk');
+          userTapped = true;
+        } else {
+          // Second tap: toggle theme
+          const isDark = document.body.classList.toggle('dark-mode');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
       });
 
+      // Shrink the button on scroll
+      window.addEventListener('scroll', () => {
+        if (!isShrunk) {
+          toggleBtn.classList.add('shrunk');
+          isShrunk = true;
+          userTapped = false;
+        }
+      });
     </script>
 
   </body>
