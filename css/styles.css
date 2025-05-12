@@ -175,6 +175,43 @@ body.dark-mode a {
   overflow: hidden;
 }
 
+#theme-toggle-container {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #f1f1f1;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark-mode #theme-toggle-container {
+  background-color: #111;
+  border-bottom: 1px solid #333;
+}
+
+#theme-toggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #555;
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #eee;
+  color: #111;
+}
+
+body.dark-mode #theme-toggle:hover {
+  background-color: #ccc;
+}
+
 
 /* FOOTER STYLES */
 
