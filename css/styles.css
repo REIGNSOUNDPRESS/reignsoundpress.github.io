@@ -176,11 +176,15 @@ body.dark-mode a {
 }
 
 #theme-toggle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 12px 0;
   background-color: #f1f1f1;
   text-align: center;
   border-bottom: 1px solid #ccc;
+  z-index: 1000;
 }
 
 body.dark-mode #theme-toggle-container {
