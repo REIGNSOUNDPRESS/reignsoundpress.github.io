@@ -221,12 +221,16 @@ body.dark-mode #theme-toggle:hover {
 
 @media screen and (min-width: 1024px) {
 
-  max-width: 1200px;
-  margin: 0 auto;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  padding-left: 40px;
-  padding-right: 40px;
+  .article-slot {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding-left: 40px;
+    padding-right: 40px;
+
+  }
 
 }
 
