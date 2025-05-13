@@ -218,6 +218,7 @@ body.dark-mode #theme-toggle {
 
 body.dark-mode #theme-toggle:hover {
   background-color: #ccc;
+  color: #111;
 }
 
 
