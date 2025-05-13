@@ -328,9 +328,12 @@ body.dark-mode .brand-item img {
 
 
 /* MOBILE STYLING */
-@media screen and (max-width: 768px) {
+/* Disable ALL hover effects on mobile (touch devices) [applies to light + dark mode] */
+@media (hover: none) and (pointer: coarse) {
   #theme-toggle:hover {
-    background-color: transparent;
+    background-color: transparent !important;
+    color: inherit !important;
+    border-color: inherit !important;
   }
 }
 
