@@ -211,8 +211,9 @@ body.dark-mode #theme-toggle-container {
 }
 
 body.dark-mode #theme-toggle {
-  background-color: #eee;
-  color: #111;
+  background-color: #111;
+  color: #eee;
+  border: 1px solid;
 }
 
 body.dark-mode #theme-toggle:hover {
