@@ -327,6 +327,14 @@ body.dark-mode .brand-item img {
 }
 
 
+/* MOBILE STYLING */
+@media screen and (max-width: 768px) {
+  #theme-toggle:hover {
+    background-color: transparent;
+  }
+}
+
+
 /* UNTITLED SECTION */
 
 .no-break {
