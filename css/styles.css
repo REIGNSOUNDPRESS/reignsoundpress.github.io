@@ -148,7 +148,11 @@ body.dark-mode .breaking-banner {
 }
 
 body.dark-mode a {
-  color: #85d1ff;
+  color: red;
+}
+
+body.dark-mode a.title-hyperlink {
+  color: white;
 }
 
 /* Embedded Theme Toggle Styles */
