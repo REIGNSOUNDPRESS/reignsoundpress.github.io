@@ -221,6 +221,17 @@ body.dark-mode #theme-toggle:hover {
   border-color: white;
 }
 
+/* Changing Color of BRAND SCROLLER Logos */
+/* Add smooth transition */
+.brand-item img {
+  transition: filter 0.3s ease;
+}
+
+/* Invert logo colors in dark mode */
+body.dark-mode .brand-item img {
+  filter: invert(1) brightness(1.5);
+}
+
 
 /* DESKTOP STYLING */
 
