@@ -208,6 +208,14 @@ body.dark-mode #theme-toggle-container {
   border-color: black;
 }
 
+/* Disable hover effect when button is active or focused (mobile and desktop) */
+#theme-toggle:active,
+#theme-toggle:focus {
+  background-color: transparent; /* Keep background transparent */
+  color: black; /* Maintain text color */
+  border-color: black; /* Maintain border color */
+}
+
 body.dark-mode #theme-toggle {
   background-color: #111;
   color: #eee;
@@ -218,6 +226,14 @@ body.dark-mode #theme-toggle:hover {
   background-color: white;
   color: black;
   border-color: white;
+}
+
+/* Disable hover effect in dark mode when the button is active or focused */
+body.dark-mode #theme-toggle:active,
+body.dark-mode #theme-toggle:focus {
+  background-color: #111;
+  color: #eee;
+  border-color: #eee;
 }
 
 /* Changing Color of BRAND SCROLLER Logos */
