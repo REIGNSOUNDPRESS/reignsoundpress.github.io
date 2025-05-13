@@ -155,7 +155,6 @@ body.dark-mode a {
 #theme-toggle {
   width: 100%;
   box-sizing: border-box;
-
   background-color: transparent;
   color: black;
   border: 1px solid black;
@@ -194,8 +193,8 @@ body.dark-mode #theme-toggle-container {
 }
 
 #theme-toggle {
-  color: white;
-  border: none;
+  color: black;
+  border: 1px solid black;
   border-radius: 6px;
   padding: 8px 16px;
   font-size: 14px;
