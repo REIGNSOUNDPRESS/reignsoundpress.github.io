@@ -163,6 +163,10 @@ body.dark-mode .footer-sitemap a {
   color: orange;
 }
 
+body.dark-mode .published-date {
+  color: #ccc;
+}
+
 body.dark-mode .references a {
   color: orange;
 }
