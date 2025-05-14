@@ -276,6 +276,20 @@ body.dark-mode .brand-item img {
 }
 
 
+/* Dark Mode Styling for .contact-div */
+
+body.dark-mode .contact-div {
+  background-color: #5c1a1a; /* deep rosy red */
+  border: 1px solid #b33a3a; /* darker red border */
+  color: #ffe6e6; /* light pinkish for contrast */
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2); /* subtle reddish glow */
+}
+
+body.dark-mode .contact-div .more-indicator {
+  color: orange;
+}
+
+
 /* DESKTOP STYLING */
 
 @media screen and (min-width: 1024px) {
