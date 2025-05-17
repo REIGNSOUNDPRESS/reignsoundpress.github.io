@@ -76,6 +76,70 @@
 
         <br>
 
+        <div style="text-align: center; margin-bottom: 20px;">
+
+            <button id="theme-toggle">🌓 Toggle Dark Mode</button>
+        
+        </div>
+
+<hr>
+    <div class="breaking-banner">
+      <div class="breaking-track">
+        <div class="breaking-content">
+          <span style="padding-left:4px;">NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+        </div>
+        <div class="breaking-content">
+          <span></span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+          <span>NEWS</span>
+        </div>
+      </div>
+    </div>
+<hr>
+
+<br>
+
         <div class="article" id="article-4">
       
             <div class="node-type">Press Release</div>
@@ -248,6 +312,90 @@
             </div>
             
         </div>
+
+        <script>
+            const toggleBtn = document.getElementById('theme-toggle');
+            let theme = localStorage.getItem('theme');
+
+            if (!theme) {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? 'dark' : 'light';
+            }
+
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+                toggleBtn.textContent = '🌓 Toggle Light Mode';
+            } else {
+                toggleBtn.textContent = '🌓 Toggle Dark Mode';
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                const isDark = document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                toggleBtn.textContent = isDark ? '🌓 Toggle Light Mode' : '🌓 Toggle Dark Mode';
+            });
+        </script>
+
+        <script>
+      const breakingTrack = document.querySelector('.breaking-track');
+
+      // Clone the content once on load
+      const originalContent = breakingTrack.innerHTML;
+      breakingTrack.innerHTML += originalContent; // Duplicate the content for continuous loop
+
+      // Function to handle the page scroll effect (parallax effect)
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        document.querySelectorAll('.breaking-track').forEach(track => {
+          // Adjust the multiplier to control how fast each banner scrolls
+          track.style.transform = `translateX(-${scrollY * 0.2}px)`;
+        });
+      });
+
+      // Infinite scroll logic
+      const contentWidth = breakingTrack.scrollWidth;
+
+      // Loop content logic
+      function loopContent() {
+        if (breakingTrack.scrollLeft >= contentWidth) {
+          breakingTrack.scrollLeft = 0; // Reset scroll position once content has been fully scrolled
+        }
+      }
+
+      // Start the loop effect
+      let isInView = false;
+
+      // Using IntersectionObserver to start the scroll when the banner is in view
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            isInView = true;
+          } else {
+            isInView = false;
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger when 10% of the element is in view
+
+      // Observe the breaking-track element
+      observer.observe(breakingTrack);
+
+      // Start the loop only when the banner is in view
+      setInterval(() => {
+        if (isInView) {
+          loopContent(); // Only loop if the banner is visible
+        }
+      }, 10); // Check every 10ms to reset scroll
+
+      // Optional: Adjust the scroll speed when manually dragging
+      breakingTrack.addEventListener("scroll", () => {
+        const currentScroll = breakingTrack.scrollLeft;
+
+        // Prevent going beyond content limits
+        if (currentScroll < contentWidth) {
+          breakingTrack.scrollLeft += 1;  // Adjust speed of loop
+        }
+      });
+    </script>
 
     </body>
 
