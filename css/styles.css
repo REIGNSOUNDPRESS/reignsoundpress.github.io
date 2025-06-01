@@ -592,6 +592,12 @@ body {
   padding: 20px;
 }
 
+figcaption {
+
+  color: #eee;
+
+}
+
 footer {
   font-size: 14px;
 }
